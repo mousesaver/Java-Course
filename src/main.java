@@ -70,6 +70,18 @@ public class main {
         doAnimalStuff(animal, "slow");
         Dogg dog = new Dogg();
         doAnimalStuff(dog, "fast");
+
+        Dogg yorkie = new Dogg("Yorkie", 15);
+        doAnimalStuff(yorkie, "fast");
+
+        Dogg retriever = new Dogg("Labrador Retriever", 65, "Floppy", "Swimmer");
+        doAnimalStuff(retriever, "slow");
+
+        Dogg wolf = new Dogg("Wolf", 40);
+        doAnimalStuff(wolf, "slow");
+
+        Fish goldie = new Fish("Goldfish", 0.25, 2 , 3);
+        doAnimalStuff(goldie, "fast");
     }
 
     public static void doAnimalStuff(Animal animal, String speed) {
