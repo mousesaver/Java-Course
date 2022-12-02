@@ -88,6 +88,12 @@ public class main extends Object{
 
         PrimarySchoolTeacher jimmy = new PrimarySchoolTeacher("Jimmy", 8, "Carol");
         System.out.println(jimmy);
+//        text block
+        String bulletIt = "Print a Bulleted List:" +
+                "\u2022 First Point" +
+                "\u2022 Second Point";
+        System.out.println(bulletIt);
+
 
     }
 

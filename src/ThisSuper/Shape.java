@@ -13,7 +13,7 @@ public class Shape {
     }
 }
 
-public class Square extends Shape {
+class Square extends Shape {
     private int width;
     private int height;
 
