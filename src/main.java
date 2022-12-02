@@ -1,4 +1,4 @@
-public class main {
+public class main extends Object{
 
     public static void main(String[] args) {
         Car car = new Car();
@@ -82,6 +82,13 @@ public class main {
 
         Fish goldie = new Fish("Goldfish", 0.25, 2 , 3);
         doAnimalStuff(goldie, "fast");
+
+        Teacher max = new Teacher("Max", 21);
+        System.out.println(max.toString());
+
+        PrimarySchoolTeacher jimmy = new PrimarySchoolTeacher("Jimmy", 8, "Carol");
+        System.out.println(jimmy);
+
     }
 
     public static void doAnimalStuff(Animal animal, String speed) {
@@ -92,5 +99,44 @@ public class main {
     }
     public static void printHello() {
         System.out.println("hello");
+    }
+}
+// java.lang.Object
+class Teacher {
+    private String name;
+    private int age;
+
+    public Teacher(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+//    @Override
+//    public String toString() {
+//        return super.toString();
+//    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+
+class PrimarySchoolTeacher extends Teacher {
+    private String parentName;
+
+    public PrimarySchoolTeacher(String name, int age, String parentName) {
+        super(name, age);
+        this.parentName = parentName;
+    }
+
+    @Override
+    public String toString() {
+        return "PrimarySchoolTeacher{" +
+                "parentName='" + parentName + '\'' +
+                "} " + super.toString();
     }
 }
